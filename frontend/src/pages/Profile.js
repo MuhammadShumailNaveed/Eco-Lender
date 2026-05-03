@@ -22,7 +22,6 @@ const Profile = () => {
   const isOwnProfile = userId === currentUser?._id;
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     if (userId) {
       fetchProfile();
       fetchStats();
@@ -62,7 +61,6 @@ const Profile = () => {
       });
       setProfile(response.data.user);
       setEditing(false);
-      // Update localStorage
       localStorage.setItem('user', JSON.stringify(response.data.user));
     } catch (error) {
       console.error('Error updating profile:', error);

@@ -1,4 +1,3 @@
-// Loan reducer
 const initialState = {
   loans: [],
   selectedLoan: null,
